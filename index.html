@@ -3,42 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>画像ギャラリー</title>
+  <title>Lightbox付き画像ギャラリー</title>
+  <link rel="stylesheet" href="colorbox.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery.colorbox-min.js"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+    /* ギャラリーのスタイル */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
       padding: 16px;
+      justify-content: center;
+    }
+    .gallery a {
+      display: block;
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
+      height: 100%;
+      object-fit: cover;
     }
   </style>
+  <script>
+    $(document).ready(function(){
+      $(".gallery a").colorbox({rel:'gallery', transition:'fade', speed:500});
+    });
+  </script>
 </head>
 <body>
 
   <div class="gallery">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="a">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="a">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="a">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="ha">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="a">
-    <img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="af">
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像1"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像1"></a>
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像2"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像2"></a>
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像3"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像3"></a>
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像4"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像4"></a>
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像5"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像5"></a>
+    <a href="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" title="画像6"><img src="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png" alt="画像6"></a>
   </div>
 
 </body>
-
+</html>
