@@ -5,21 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>画像ギャラリー</title>
   <style>
-    /* ページ全体を中央寄せにする */
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f0f0f0;
+      padding: 0;
+      background-color: #f4f4f4;
     }
-    /* 画像の最大幅を画面幅に合わせる */
-    img {
-      max-width: 100%;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+    .gallery img {
+      width: 100%;
       height: auto;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    <img src="image1.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/c61e17a1e51a8567ee161d4e68df399b0ef3bae1.png">
+    <img src="image2.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/f97c8db6baf9601a655a881b20993d066d4f9960.png">
+    <img src="image3.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/892798d497f6a4d86f3b22a668128fb8c498d0cd.jpg">
+    <img src="image4.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/b7301dc2e4a52406a6111f0e0a132f8b80e9a666.gif">
+    <img src="image5.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/18a1ef0d6ff73d01263654dc94602cbc84b5f852.gif">
+    <img src="image6.jpg" alt="https://dfism93xf7v0zd.archive.md/CPH4t/18a1ef0d6ff73d01263654dc94602cbc84b5f852.gif">
+  </div>
+
+</body>
+</html>
+
     }
   </style>
 </head>
